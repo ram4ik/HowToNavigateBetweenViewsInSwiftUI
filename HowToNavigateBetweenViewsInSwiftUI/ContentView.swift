@@ -10,7 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello World")
+        NavigationView {
+            VStack {
+                NavigationLink(destination: OneFile()) {
+                    Text("Press me to be moved")
+                        .frame(width: 300, height: 300, alignment: .center)
+                        .background(Color.black)
+                        .cornerRadius(150)
+                }
+            }.navigationBarTitle("Different View")
+        }
     }
 }
 
